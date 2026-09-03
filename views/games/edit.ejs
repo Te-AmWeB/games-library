@@ -1,0 +1,42 @@
+<%- include('../partials/header') %>
+
+<h2>✏️ Редактировать игру</h2>
+
+<form method="POST" action="/games/<%= game.id %>">
+    <div>
+        <label>Название игры *</label>
+        <input type="text" name="title" value="<%= game.title %>" required>
+    </div>
+    <div>
+        <label>Год выпуска</label>
+        <input type="number" name="year" value="<%= game.year || '' %>">
+    </div>
+    <div>
+        <label>Жанр</label>
+        <select name="genre_id">
+            <option value="">— Выберите жанр —</option>
+            <% genres.forEach(genre => { %>
+                <option value="<%= genre.id %>" <%= genre.id === game.genre_id ? 'selected' : '' %>>
+                    <%= genre.name %>
+                </option>
+            <% }) %>
+        </select>
+    </div>
+    <div>
+        <label>Разработчик</label>
+        <select name="developer_id">
+            <option value="">— Выберите разработчика —</option>
+            <% developers.forEach(dev => { %>
+                <option value="<%= dev.id %>" <%= dev.id === game.developer_id ? 'selected' : '' %>>
+                    <%= dev.name %>
+                </option>
+            <% }) %>
+        </select>
+    </div>
+    <button type="submit">💾 Сохранить</button>
+    <a href="/games">❌ Отмена</a>
+</form>
+
+</main>
+</body>
+</html>

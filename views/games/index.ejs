@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<h2>Все игры</h2>
+<% if (games.length === 0) { %>
+<p>🖕Игр нет. <a href="/games/new">Добавить первую👍</a></p>
+<% } else { %>
+<ul class="game-list">
+    <% games.forEach(game => { %>
+    <li class="game-card">
+        <h3><%= game.title %></h3>
+        <p><strong>Год:</strong> <%= game.year || '-' %></p>
+        <p><strong>Жанр:</strong> <%= game.genre_name || '-' %></p>
+        <p><strong>Разработчик:</strong> <%= game.developer_name || '-' %></p>
+        <a href="/games/<%= game.id %>">🔎 Подробнее</a>
+    </li>
+    <% }) %>
+</ul>
+    <% } %>
+</main>
+</body>
+</html>

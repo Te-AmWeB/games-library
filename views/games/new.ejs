@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<h2>➕ Добавить игру</h2>
+<form method="POST" action="/games">
+    <div>
+    <label>Название игры</label>
+    <input type="text" name="title" required>
+    </div>
+    <div>
+    <label>Год выпуска</label>
+     <input type="number" name="year" placeholder="2022">
+     </div>
+     <div>
+     <lable>Разработчик</lable>
+     <select name="developer_id">
+        <option value="">-Выберете разработчика-</option>
+        <% developers.forEach(dev => { %>
+        <option value="<%= dev.id %>"><%= dev.name %></option>
+        <% }) %>
+     </select>
+     </div>
+     <button type="submit">💾 Сохранить</button>
+     <a href="/games">❌ Отмена</a>
+</form>
+</main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<h2>🔎 <%- game.title %></h2>
+<div class="game-detail">
+    <a href="/games/<%= game.id %>/edit">✏️ Редактировать</a>
+    <form method="POST" action="/games/<%= game.id %>/delete" style="display: inline;">
+        <button type="submit" onclick="return confirm('Удалить?')">🗑️ Удалить</button>
+    </form>
+    <a href="/games">⬅️ Назад к списку</a>
+</div>
+</main>
+</body>
+</html>
