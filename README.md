@@ -79,4 +79,5 @@ npm run dev
 
 https://github.com/Te-AmWeB/games-library/blob/main/add.png.png
 https://github.com/Te-AmWeB/games-library/blob/main/lobby.png.png
+https://github.com/Te-AmWeB/games-library/blob/main/Redaction.png.png
 
