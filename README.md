@@ -53,7 +53,7 @@ Foreign key constraints ensure data integrity. Deleting a genre or developer set
 | Role | Focus |
 |------|-------|
 | Backend Developer | Node.js, Express, PostgreSQL, Routing, Deployment |
-| Frontend Developer | HTML, CSS, Responsive Design, Animations |
+| Frontend Developer | HTML, CSS, Responsive Design, Animations | https://github.com/Stack-zzz
 
 Self-taught developers learning through real projects and daily practice.
 
